@@ -1,0 +1,4 @@
+<button (click)="create()">New Post</button>
+<ul>
+    <li *ngFor="let post of posts" (click)="edit(post.postid)">{{ post.title }} ({{ ((post.created.getMonth() > 8) ? (post.created.getMonth() + 1) : ('0' + (post.created.getMonth() + 1))) + '/' + ((post.created.getDate() > 9) ? post.created.getDate() : ('0' + post.created.getDate())) + '/' + post.created.getFullYear() }}) </li>
+</ul>

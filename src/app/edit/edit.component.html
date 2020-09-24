@@ -1,0 +1,11 @@
+<div *ngIf="post" class="subcontainer">
+    <label for="title">Title:</label>
+    <input type="text" id="title" [(ngModel)]="post.title">
+    <label for="body">Body:</label>
+    <textarea id="body" [(ngModel)]="post.body"></textarea>
+    <div>
+        <button (click)="preview()">preview</button>
+        <button (click)="save()">save</button>
+        <button (click)="delete()">delete</button>
+    </div>
+</div>
